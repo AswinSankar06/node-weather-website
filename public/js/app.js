@@ -1,5 +1,5 @@
 
-console.log('Wellcome to index javaScript file')
+
 
 // fetch('http://localhost:3000/weather?address=china').then((response)=>{
 //     response.json().then((data)=>{

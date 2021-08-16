@@ -8,9 +8,9 @@ const url='http://api.weatherstack.com/current?access_key=089c9907078e6e2faddfd4
     if (error) {
         callback('Unbale to connect to the internet',undefined)
     } else if (body.error){
-       callback("Cann't find this location",undefined)
+       callback("Cann't find this location, try another location",undefined)
     } else {
-        callback(undefined,body.current.weather_descriptions+'. It is currently '+body.current.temperature+' degress out. It feels like '+body.current.feelslike+' degress out')
+        callback(undefined,'Forecast: '+body.current.weather_descriptions+'. It is currently '+body.current.temperature+' degress out. It feels like '+body.current.feelslike+' degress out.             Humidity:'+body.current.humidity)
     }
  })
 

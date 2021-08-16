@@ -24,15 +24,18 @@ weatherApp.addEventListener('submit',(e)=>{
     messageOne.textContent='Loding...'
     messageTwo.textContent=''
     fetch('/weather?address='+locationValue).then((response)=>{
-    response.json().then((data)=>{
+    
+        response.json().then((data)=>{
         if(data.error){
             messageOne.textContent=data.error
             messageTwo.textContent=''
         }else{
-            messageOne.textContent=data.location
+            messageOne.textContent='Location:'+data.location
             messageTwo.textContent=data.forecast
 
         }
     })
+    
 })
+
 })
